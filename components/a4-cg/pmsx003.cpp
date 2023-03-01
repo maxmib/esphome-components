@@ -175,8 +175,8 @@ optional<bool> PMSX003Component::check_byte_() {
 
 void PMSX003Component::send_command_(uint8_t cmd, uint16_t data) {
   this->data_index_ = 0;
-  this->data_[data_index_++] = 0x42;
-  this->data_[data_index_++] = 0x4D;
+  this->data_[data_index_++] = 0x32;
+  this->data_[data_index_++] = 0x3D;
   this->data_[data_index_++] = cmd;
   this->data_[data_index_++] = (data >> 8) & 0xFF;
   this->data_[data_index_++] = (data >> 0) & 0xFF;
